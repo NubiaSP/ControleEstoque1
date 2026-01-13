@@ -52,8 +52,41 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\Adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Adicionar.Designer.cs">
+      <DependentUpon>Adicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Listagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Listagem.Designer.cs">
+      <DependentUpon>Listagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Remover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Remover.Designer.cs">
+      <DependentUpon>Remover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario\Saida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario\Saida.Designer.cs">
+      <DependentUpon>Saida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +109,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
