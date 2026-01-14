@@ -92,6 +92,7 @@
             this.cbTipoProdutoSaida.Name = "cbTipoProdutoSaida";
             this.cbTipoProdutoSaida.Size = new System.Drawing.Size(303, 33);
             this.cbTipoProdutoSaida.TabIndex = 12;
+            this.cbTipoProdutoSaida.SelectedIndexChanged += new System.EventHandler(this.cbTipoProdutoSaida_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -125,6 +126,7 @@
             this.btNovoSaida.TabIndex = 21;
             this.btNovoSaida.Text = "Novo";
             this.btNovoSaida.UseVisualStyleBackColor = false;
+            this.btNovoSaida.Click += new System.EventHandler(this.btNovoSaida_Click);
             // 
             // btCadastraSaida
             // 

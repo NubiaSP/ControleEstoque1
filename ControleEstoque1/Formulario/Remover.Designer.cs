@@ -64,6 +64,7 @@
             this.btNovoRemov.TabIndex = 34;
             this.btNovoRemov.Text = "Novo";
             this.btNovoRemov.UseVisualStyleBackColor = false;
+            this.btNovoRemov.Click += new System.EventHandler(this.btNovoRemov_Click);
             // 
             // btCadastraRemov
             // 
@@ -106,6 +107,7 @@
             this.cbTipoProdutoRemov.Name = "cbTipoProdutoRemov";
             this.cbTipoProdutoRemov.Size = new System.Drawing.Size(303, 33);
             this.cbTipoProdutoRemov.TabIndex = 28;
+            this.cbTipoProdutoRemov.SelectedIndexChanged += new System.EventHandler(this.cbTipoProdutoRemov_SelectedIndexChanged);
             // 
             // label1
             // 

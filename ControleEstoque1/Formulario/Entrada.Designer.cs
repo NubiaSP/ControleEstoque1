@@ -66,6 +66,7 @@
             this.btNovoEntra.TabIndex = 34;
             this.btNovoEntra.Text = "Novo";
             this.btNovoEntra.UseVisualStyleBackColor = false;
+            this.btNovoEntra.Click += new System.EventHandler(this.btNovoEntra_Click);
             // 
             // btCadastraEntra
             // 
@@ -126,6 +127,7 @@
             this.cbTipoProdutoEntra.Name = "cbTipoProdutoEntra";
             this.cbTipoProdutoEntra.Size = new System.Drawing.Size(303, 33);
             this.cbTipoProdutoEntra.TabIndex = 28;
+            this.cbTipoProdutoEntra.SelectedIndexChanged += new System.EventHandler(this.cbTipoProdutoEntra_SelectedIndexChanged);
             // 
             // label1
             // 

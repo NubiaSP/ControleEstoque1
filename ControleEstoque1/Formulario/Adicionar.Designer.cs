@@ -78,6 +78,7 @@
             this.cbTipoProdutoAdd.Name = "cbTipoProdutoAdd";
             this.cbTipoProdutoAdd.Size = new System.Drawing.Size(303, 33);
             this.cbTipoProdutoAdd.TabIndex = 2;
+            this.cbTipoProdutoAdd.SelectedIndexChanged += new System.EventHandler(this.cbTipoProdutoAdd_SelectedIndexChanged);
             // 
             // txtNome
             // 
@@ -191,6 +192,7 @@
             this.btNovo.TabIndex = 14;
             this.btNovo.Text = "Novo";
             this.btNovo.UseVisualStyleBackColor = false;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
             // Adicionar
             // 
