@@ -30,15 +30,12 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.btNovoRemov = new System.Windows.Forms.Button();
-            this.btCadastraRemov = new System.Windows.Forms.Button();
+            this.btRemov = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtIDRemov = new System.Windows.Forms.TextBox();
             this.cbTipoProdutoRemov = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListRemov = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListRemov)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +43,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(198, 9);
+            this.label2.Location = new System.Drawing.Point(178, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(386, 32);
             this.label2.TabIndex = 26;
@@ -66,16 +63,16 @@
             this.btNovoRemov.UseVisualStyleBackColor = false;
             this.btNovoRemov.Click += new System.EventHandler(this.btNovoRemov_Click);
             // 
-            // btCadastraRemov
+            // btRemov
             // 
-            this.btCadastraRemov.BackColor = System.Drawing.Color.LightGreen;
-            this.btCadastraRemov.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCadastraRemov.Location = new System.Drawing.Point(31, 344);
-            this.btCadastraRemov.Name = "btCadastraRemov";
-            this.btCadastraRemov.Size = new System.Drawing.Size(131, 39);
-            this.btCadastraRemov.TabIndex = 33;
-            this.btCadastraRemov.Text = "Cadastrar";
-            this.btCadastraRemov.UseVisualStyleBackColor = false;
+            this.btRemov.BackColor = System.Drawing.Color.LightGreen;
+            this.btRemov.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRemov.Location = new System.Drawing.Point(31, 344);
+            this.btRemov.Name = "btRemov";
+            this.btRemov.Size = new System.Drawing.Size(131, 39);
+            this.btRemov.TabIndex = 33;
+            this.btRemov.Text = "Remover";
+            this.btRemov.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -122,10 +119,6 @@
             // dgvListRemov
             // 
             this.dgvListRemov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListRemov.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nome,
-            this.estoque});
             this.dgvListRemov.Location = new System.Drawing.Point(385, 72);
             this.dgvListRemov.Name = "dgvListRemov";
             this.dgvListRemov.RowHeadersWidth = 51;
@@ -133,35 +126,14 @@
             this.dgvListRemov.Size = new System.Drawing.Size(381, 377);
             this.dgvListRemov.TabIndex = 35;
             // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.MinimumWidth = 6;
-            this.nome.Name = "nome";
-            this.nome.Width = 200;
-            // 
-            // estoque
-            // 
-            this.estoque.HeaderText = "Estoque";
-            this.estoque.MinimumWidth = 6;
-            this.estoque.Name = "estoque";
-            this.estoque.Width = 80;
-            // 
             // Remover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(777, 450);
             this.Controls.Add(this.dgvListRemov);
             this.Controls.Add(this.btNovoRemov);
-            this.Controls.Add(this.btCadastraRemov);
+            this.Controls.Add(this.btRemov);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIDRemov);
             this.Controls.Add(this.cbTipoProdutoRemov);
@@ -179,14 +151,11 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btNovoRemov;
-        private System.Windows.Forms.Button btCadastraRemov;
+        private System.Windows.Forms.Button btRemov;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtIDRemov;
         private System.Windows.Forms.ComboBox cbTipoProdutoRemov;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListRemov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estoque;
     }
 }

@@ -17,6 +17,9 @@ namespace ControleEstoque1.Formulario
         public decimal? frete { get; set; }
         public string Autor { get; set; }
         public OpcaoAdi tipo { get; set; }
+        public int? Estoque { get; set; }
+        public int? Vendas { get; set; }
+
 
         public produto()
         {

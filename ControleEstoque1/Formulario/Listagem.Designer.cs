@@ -52,6 +52,7 @@
             this.dgvListagem.RowTemplate.Height = 24;
             this.dgvListagem.Size = new System.Drawing.Size(1125, 409);
             this.dgvListagem.TabIndex = 6;
+            this.dgvListagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListagem_CellContentClick);
             // 
             // Listagem
             // 

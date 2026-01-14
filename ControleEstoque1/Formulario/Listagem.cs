@@ -23,5 +23,10 @@ namespace ControleEstoque1.Formulario
             dgvListagem.DataSource = null;
             dgvListagem.DataSource = BancoDados.ProdutoLis;
         }
+
+        private void dgvListagem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

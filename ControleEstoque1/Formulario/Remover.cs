@@ -21,21 +21,66 @@ namespace ControleEstoque1.Formulario
         public Remover()
         {
             InitializeComponent();
+            cbTipoProdutoRemov.DataSource = Enum.GetValues(typeof(OpcaoRemover));
+   
+                var ResumoProduto = BancoDados.ProdutoLis.Select(p => new
+                {
+                    p.id,
+                    p.Nome,
+                    p.Estoque,
+                    p.Vendas,
+
+
+                }).ToList();
+                dgvListRemov.DataSource = ResumoProduto;
+           
         }
 
         private void cbTipoProdutoRemov_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            int opcRemov = cbTipoProdutoRemov.SelectedIndex;
-            OpcaoRemover escolhaRemov = (OpcaoRemover)opcRemov;
+           
+            OpcaoRemover escolhaRemov = (OpcaoRemover)cbTipoProdutoRemov.SelectedItem;
 
             switch (escolhaRemov)
             {
                 case OpcaoRemover.ProdutoFisico:
+
+                    DialogResult respostaPf = MessageBox.Show
+                    ("Deseja mesmo excluir um produto?",
+                    "Confirmação", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (respostaPf == DialogResult.No)
+                    {
+                        VoltarTelaInicial();
+                    }
+
                     break;
                 case OpcaoRemover.Ebook:
+
+                    DialogResult respostaEb = MessageBox.Show
+                    ("Deseja mesmo excluir um Ebook?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (respostaEb == DialogResult.No)
+                    {
+                        VoltarTelaInicial();
+                    }
+
                     break;
                 case OpcaoRemover.Curso:
+
+                    DialogResult respostaCs = MessageBox.Show
+                    ("Deseja mesmo excluir um Curso?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (respostaCs == DialogResult.No)
+                    {
+                        VoltarTelaInicial();
+                    }
+
                     break;
             }
 
@@ -45,6 +90,14 @@ namespace ControleEstoque1.Formulario
         {
             txtIDRemov.Clear();
             cbTipoProdutoRemov.Select();
+        }
+
+        private void VoltarTelaInicial()
+        {
+            this.Hide(); //escolhe a tela inical 
+            Form1 formPricipal = new Form1();
+
+            formPricipal.Show();
         }
     }
 }
