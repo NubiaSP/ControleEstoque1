@@ -56,5 +56,10 @@ namespace ControleEstoque1
                     break;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

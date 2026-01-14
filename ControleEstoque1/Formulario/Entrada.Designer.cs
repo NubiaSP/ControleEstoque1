@@ -38,9 +38,6 @@
             this.cbTipoProdutoEntra = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvListEntrada = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEntrada)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +75,7 @@
             this.btCadastraEntra.TabIndex = 33;
             this.btCadastraEntra.Text = "Cadastrar";
             this.btCadastraEntra.UseVisualStyleBackColor = false;
+            this.btCadastraEntra.Click += new System.EventHandler(this.btCadastraEntra_Click);
             // 
             // txtQntEntrada
             // 
@@ -142,37 +140,12 @@
             // dgvListEntrada
             // 
             this.dgvListEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListEntrada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nome,
-            this.estoque});
             this.dgvListEntrada.Location = new System.Drawing.Point(365, 74);
             this.dgvListEntrada.Name = "dgvListEntrada";
             this.dgvListEntrada.RowHeadersWidth = 51;
             this.dgvListEntrada.RowTemplate.Height = 24;
             this.dgvListEntrada.Size = new System.Drawing.Size(381, 377);
             this.dgvListEntrada.TabIndex = 35;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.MinimumWidth = 6;
-            this.nome.Name = "nome";
-            this.nome.Width = 200;
-            // 
-            // estoque
-            // 
-            this.estoque.HeaderText = "Estoque";
-            this.estoque.MinimumWidth = 6;
-            this.estoque.Name = "estoque";
-            this.estoque.Width = 80;
             // 
             // Entrada
             // 
@@ -209,8 +182,5 @@
         private System.Windows.Forms.ComboBox cbTipoProdutoEntra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvListEntrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estoque;
     }
 }

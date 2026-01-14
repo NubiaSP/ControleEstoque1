@@ -39,51 +39,6 @@ namespace ControleEstoque1.Formulario
         private void cbTipoProdutoRemov_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-           
-            OpcaoRemover escolhaRemov = (OpcaoRemover)cbTipoProdutoRemov.SelectedItem;
-
-            switch (escolhaRemov)
-            {
-                case OpcaoRemover.ProdutoFisico:
-
-                    DialogResult respostaPf = MessageBox.Show
-                    ("Deseja mesmo excluir um produto?",
-                    "Confirmação", 
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                    if (respostaPf == DialogResult.No)
-                    {
-                        VoltarTelaInicial();
-                    }
-
-                    break;
-                case OpcaoRemover.Ebook:
-
-                    DialogResult respostaEb = MessageBox.Show
-                    ("Deseja mesmo excluir um Ebook?",
-                    "Confirmação",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                    if (respostaEb == DialogResult.No)
-                    {
-                        VoltarTelaInicial();
-                    }
-
-                    break;
-                case OpcaoRemover.Curso:
-
-                    DialogResult respostaCs = MessageBox.Show
-                    ("Deseja mesmo excluir um Curso?",
-                    "Confirmação",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (respostaCs == DialogResult.No)
-                    {
-                        VoltarTelaInicial();
-                    }
-
-                    break;
-            }
-
         }
 
         private void btNovoRemov_Click(object sender, EventArgs e)
@@ -98,6 +53,13 @@ namespace ControleEstoque1.Formulario
             Form1 formPricipal = new Form1();
 
             formPricipal.Show();
+        }
+
+        private void btRemov_Click(object sender, EventArgs e)
+        {
+            int idRemov = Convert.ToInt32(txtIDRemov.Text);
+            BancoDados.ProdutoLis.RemoveAt(idRemov - 1);
+            MessageBox.Show("removido");
         }
     }
 }

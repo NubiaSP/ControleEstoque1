@@ -21,22 +21,23 @@ namespace ControleEstoque1.Formulario
         public Entrada()
         {
             InitializeComponent();
+            cbTipoProdutoEntra.DataSource = Enum.GetValues(typeof(OpcaoRemover));
+
+            var ResumoProdEn = BancoDados.ProdutoLis.Select(p => new
+            {
+                p.id,
+                p.Nome,
+                p.Estoque,
+                p.Vendas,
+
+
+            }).ToList();
+            dgvListEntrada.DataSource = ResumoProdEn;
+
         }
 
         private void cbTipoProdutoEntra_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int opcEntrada = cbTipoProdutoEntra.SelectedIndex;
-            OpcaoEntrada escolhaEntrada = (OpcaoEntrada)opcEntrada;
-
-            switch (escolhaEntrada)
-            {
-                case OpcaoEntrada.ProdutoFisico:
-                    break;
-                case OpcaoEntrada.Ebook:
-                    break;
-                case OpcaoEntrada.Curso:
-                    break;
-            }
         }
 
         private void btNovoEntra_Click(object sender, EventArgs e)
@@ -44,6 +45,12 @@ namespace ControleEstoque1.Formulario
             txtIDEntrada.Clear();
             txtQntEntrada.Clear();
             cbTipoProdutoEntra.Select();
+        }
+
+        private void btCadastraEntra_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("Entrada");
         }
     }
 }

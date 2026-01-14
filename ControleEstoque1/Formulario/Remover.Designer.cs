@@ -73,6 +73,7 @@
             this.btRemov.TabIndex = 33;
             this.btRemov.Text = "Remover";
             this.btRemov.UseVisualStyleBackColor = false;
+            this.btRemov.Click += new System.EventHandler(this.btRemov_Click);
             // 
             // label5
             // 
@@ -123,14 +124,14 @@
             this.dgvListRemov.Name = "dgvListRemov";
             this.dgvListRemov.RowHeadersWidth = 51;
             this.dgvListRemov.RowTemplate.Height = 24;
-            this.dgvListRemov.Size = new System.Drawing.Size(381, 377);
+            this.dgvListRemov.Size = new System.Drawing.Size(569, 377);
             this.dgvListRemov.TabIndex = 35;
             // 
             // Remover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 450);
+            this.ClientSize = new System.Drawing.Size(1023, 450);
             this.Controls.Add(this.dgvListRemov);
             this.Controls.Add(this.btNovoRemov);
             this.Controls.Add(this.btRemov);
