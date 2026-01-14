@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbOpcaoInicio = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -43,21 +43,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Controle do Estoque ";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Listagem ",
-            "Adicionar",
-            "Renover",
-            "Entrada",
-            "Saida"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(409, 33);
-            this.comboBox1.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -68,13 +53,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Selecione a opção ";
             // 
+            // cbOpcaoInicio
+            // 
+            this.cbOpcaoInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbOpcaoInicio.FormattingEnabled = true;
+            this.cbOpcaoInicio.Items.AddRange(new object[] {
+            "Listagem dos Produtos",
+            "Adicionar Produto",
+            "Remover Produto",
+            "Entrada Estoque",
+            "Saida Estoque"});
+            this.cbOpcaoInicio.Location = new System.Drawing.Point(12, 130);
+            this.cbOpcaoInicio.Name = "cbOpcaoInicio";
+            this.cbOpcaoInicio.Size = new System.Drawing.Size(427, 33);
+            this.cbOpcaoInicio.TabIndex = 3;
+            this.cbOpcaoInicio.SelectedIndexChanged += new System.EventHandler(this.cbOpcaoInicio_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 484);
+            this.Controls.Add(this.cbOpcaoInicio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -86,8 +87,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbOpcaoInicio;
     }
 }
 

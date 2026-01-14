@@ -16,5 +16,10 @@ namespace ControleEstoque1.Formulario
         {
             InitializeComponent();
         }
+
+        private void Listagem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
