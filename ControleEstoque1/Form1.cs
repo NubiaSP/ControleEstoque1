@@ -13,10 +13,10 @@ namespace ControleEstoque1
 {
     enum OpcaoInicio
     {
-        Adicionar,
-        Entrada,
         Listagem,
+        Adicionar,
         Remover,
+        Entrada,
         Saida
     }
     public partial class Form1 : Form
@@ -34,22 +34,22 @@ namespace ControleEstoque1
 
             switch (escolha)
             {
-                case OpcaoInicio.Adicionar:
-                    Adicionar formAdi = new Adicionar();
-                    formAdi.ShowDialog();
-                    break;
-                case OpcaoInicio.Entrada:
-                    Entrada formEnt = new Entrada();
-                    formEnt.ShowDialog();
-                    break;
                 case OpcaoInicio.Listagem:
                     Listagem formLis = new Listagem();
                     formLis.ShowDialog();
+                    break;
+                case OpcaoInicio.Adicionar:
+                    Adicionar formAdi = new Adicionar();
+                    formAdi.ShowDialog();
                     break;
                 case OpcaoInicio.Remover:
                     Remover formRem = new Remover();
                     formRem.ShowDialog();
                     break;
+                case OpcaoInicio.Entrada:
+                    Entrada formEnt = new Entrada();
+                    formEnt.ShowDialog();
+                    break;            
                 case OpcaoInicio.Saida:
                     Saida formSai = new Saida();
                     formSai.ShowDialog();

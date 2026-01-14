@@ -55,6 +55,7 @@
             this.btCadastra.TabIndex = 0;
             this.btCadastra.Text = "Cadastrar";
             this.btCadastra.UseVisualStyleBackColor = false;
+            this.btCadastra.Click += new System.EventHandler(this.btCadastra_Click);
             // 
             // label1
             // 
@@ -216,6 +217,7 @@
             this.Controls.Add(this.btCadastra);
             this.Name = "Adicionar";
             this.Text = "Adicionar";
+            this.Load += new System.EventHandler(this.Adicionar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

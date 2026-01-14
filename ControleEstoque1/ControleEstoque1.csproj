@@ -58,6 +58,7 @@
     <Compile Include="Formulario\Adicionar.Designer.cs">
       <DependentUpon>Adicionar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\BancoDados.cs" />
     <Compile Include="Formulario\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +71,7 @@
     <Compile Include="Formulario\Listagem.Designer.cs">
       <DependentUpon>Listagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario\produto.cs" />
     <Compile Include="Formulario\Remover.cs">
       <SubType>Form</SubType>
     </Compile>

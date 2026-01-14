@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControleEstoque1.Formulario;
 
 namespace ControleEstoque1.Formulario
 {
@@ -19,7 +20,8 @@ namespace ControleEstoque1.Formulario
 
         private void Listagem_Load(object sender, EventArgs e)
         {
-
+            dgvListagem.DataSource = null;
+            dgvListagem.DataSource = BancoDados.ProdutoLis;
         }
     }
 }

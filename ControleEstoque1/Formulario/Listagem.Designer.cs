@@ -30,14 +30,6 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dgvListagem = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.venda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,76 +46,12 @@
             // dgvListagem
             // 
             this.dgvListagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nome,
-            this.descricao,
-            this.preco,
-            this.frete,
-            this.autor,
-            this.estoque,
-            this.venda});
             this.dgvListagem.Location = new System.Drawing.Point(9, 74);
             this.dgvListagem.Name = "dgvListagem";
             this.dgvListagem.RowHeadersWidth = 51;
             this.dgvListagem.RowTemplate.Height = 24;
             this.dgvListagem.Size = new System.Drawing.Size(1125, 409);
             this.dgvListagem.TabIndex = 6;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 50;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.MinimumWidth = 6;
-            this.nome.Name = "nome";
-            this.nome.Width = 300;
-            // 
-            // descricao
-            // 
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.MinimumWidth = 6;
-            this.descricao.Name = "descricao";
-            this.descricao.Width = 300;
-            // 
-            // preco
-            // 
-            this.preco.HeaderText = "Preço";
-            this.preco.MinimumWidth = 6;
-            this.preco.Name = "preco";
-            this.preco.Width = 80;
-            // 
-            // frete
-            // 
-            this.frete.HeaderText = "Frete";
-            this.frete.MinimumWidth = 6;
-            this.frete.Name = "frete";
-            this.frete.Width = 80;
-            // 
-            // autor
-            // 
-            this.autor.HeaderText = "Autor";
-            this.autor.MinimumWidth = 6;
-            this.autor.Name = "autor";
-            // 
-            // estoque
-            // 
-            this.estoque.HeaderText = "Estoque";
-            this.estoque.MinimumWidth = 6;
-            this.estoque.Name = "estoque";
-            this.estoque.Width = 80;
-            // 
-            // venda
-            // 
-            this.venda.HeaderText = "Vendas";
-            this.venda.MinimumWidth = 6;
-            this.venda.Name = "venda";
-            this.venda.Width = 80;
             // 
             // Listagem
             // 
@@ -145,13 +73,5 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvListagem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estoque;
-        private System.Windows.Forms.DataGridViewTextBoxColumn venda;
     }
 }

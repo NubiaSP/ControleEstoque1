@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleEstoque1.Formulario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +17,10 @@ namespace ControleEstoque1.Formulario
         Ebook,
         Curso
     }
+
     public partial class Adicionar : Form
     {
+
         public Adicionar()
         {
             InitializeComponent();
@@ -25,26 +28,28 @@ namespace ControleEstoque1.Formulario
             txtFrete.Visible = false;
             lbAutor.Visible = false;
             lbFrete.Visible = false;
+            cbTipoProdutoAdd.DataSource = Enum.GetValues(typeof(OpcaoAdi));
         }
 
         private void cbTipoProdutoAdd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int opcCadastro = cbTipoProdutoAdd.SelectedIndex;
-            OpcaoAdi escolha = (OpcaoAdi)opcCadastro;
+          
+            OpcaoAdi escolha = (OpcaoAdi)cbTipoProdutoAdd.SelectedItem;
 
             switch (escolha)
             {
                 case OpcaoAdi.ProdutoFisico:
                     txtFrete.Visible = true;
                     lbFrete.Visible = true;
+                    txtAutor.Visible = false;
+                    lbAutor.Visible = false;
                     break;
                 case OpcaoAdi.Ebook:
-                    txtAutor.Visible = true;
-                    lbAutor.Visible = true;
-                    break;
                 case OpcaoAdi.Curso:
                     txtAutor.Visible = true;
                     lbAutor.Visible = true;
+                    txtFrete.Visible = false;
+                    lbFrete.Visible = false;
                     break;
             }
         }
@@ -57,6 +62,38 @@ namespace ControleEstoque1.Formulario
             txtNome.Clear();
             txtPreco.Clear();
             cbTipoProdutoAdd.Select();
+        }
+
+        private void btCadastra_Click(object sender, EventArgs e)
+        {
+
+            produto produtos = new produto();
+            {
+                produtos.Nome = txtNome.Text;
+                produtos.Descricao = txtDescricao.Text;
+                produtos.preco = Convert.ToDouble(txtPreco.Text);
+                produtos.tipo = (OpcaoAdi)cbTipoProdutoAdd.SelectedItem;
+
+                if(produtos.tipo == OpcaoAdi.ProdutoFisico)
+                {
+                    produtos.frete = Convert.ToDecimal(txtFrete.Text);
+                    produtos.Autor = null;
+                }
+                else
+                {
+                    produtos.Autor = txtAutor.Text;
+                    produtos.frete = null;
+                }
+                BancoDados.ProdutoLis.Add(produtos);
+
+                MessageBox.Show("Produto Salvo com Sucesso!");
+
+            }
+        }
+
+        private void Adicionar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
