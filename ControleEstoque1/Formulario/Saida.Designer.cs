@@ -138,6 +138,7 @@
             this.btCadastraSaida.TabIndex = 20;
             this.btCadastraSaida.Text = "Cadastrar";
             this.btCadastraSaida.UseVisualStyleBackColor = false;
+            this.btCadastraSaida.Click += new System.EventHandler(this.btCadastraSaida_Click);
             // 
             // dgvListSaida
             // 

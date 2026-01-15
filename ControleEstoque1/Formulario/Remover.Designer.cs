@@ -43,7 +43,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 9);
+            this.label2.Location = new System.Drawing.Point(276, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(386, 32);
             this.label2.TabIndex = 26;
@@ -124,14 +124,14 @@
             this.dgvListRemov.Name = "dgvListRemov";
             this.dgvListRemov.RowHeadersWidth = 51;
             this.dgvListRemov.RowTemplate.Height = 24;
-            this.dgvListRemov.Size = new System.Drawing.Size(569, 377);
+            this.dgvListRemov.Size = new System.Drawing.Size(578, 377);
             this.dgvListRemov.TabIndex = 35;
             // 
             // Remover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 450);
+            this.ClientSize = new System.Drawing.Size(985, 450);
             this.Controls.Add(this.dgvListRemov);
             this.Controls.Add(this.btNovoRemov);
             this.Controls.Add(this.btRemov);

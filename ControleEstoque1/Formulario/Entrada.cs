@@ -49,8 +49,29 @@ namespace ControleEstoque1.Formulario
 
         private void btCadastraEntra_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show("Entrada");
+            int idEntrada;
+            int qntEntrada;
+            if (!int.TryParse(txtIDEntrada.Text,out idEntrada))
+            {
+                MessageBox.Show("ID Inválido!");
+                return;
+            }
+            if(!int.TryParse(txtIDEntrada.Text, out qntEntrada) || qntEntrada <= 0)
+            {
+                MessageBox.Show("ID Inválido!");
+                return;
+            }
+            var produtoEn = BancoDados.ProdutoLis
+                .FirstOrDefault(p => p.id == idEntrada);
+            if (produtoEn == null)
+            {
+                MessageBox.Show("Produto não encontrado");
+                return;
+
+            }
+            produtoEn.Estoque += qntEntrada;
+
+            MessageBox.Show("Estoque atualizado");
         }
     }
 }

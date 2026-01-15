@@ -45,7 +45,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(199, 20);
+            this.label2.Location = new System.Drawing.Point(234, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(379, 32);
             this.label2.TabIndex = 26;
@@ -144,14 +144,14 @@
             this.dgvListEntrada.Name = "dgvListEntrada";
             this.dgvListEntrada.RowHeadersWidth = 51;
             this.dgvListEntrada.RowTemplate.Height = 24;
-            this.dgvListEntrada.Size = new System.Drawing.Size(381, 377);
+            this.dgvListEntrada.Size = new System.Drawing.Size(481, 377);
             this.dgvListEntrada.TabIndex = 35;
             // 
             // Entrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(858, 450);
             this.Controls.Add(this.dgvListEntrada);
             this.Controls.Add(this.btNovoEntra);
             this.Controls.Add(this.btCadastraEntra);
